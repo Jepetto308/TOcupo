@@ -1,5 +1,3 @@
-/Business/
-/Controllers/
 /DAO/
-/Utils/
-/entity/
+/Controllers/
+/Business/

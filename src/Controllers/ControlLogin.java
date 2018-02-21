@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import Business.ActionUsuario;
 import entity.Usuario;
 import Utils.Encriptador;
+import Utils.Utilidades;
+
 import javax.servlet.http.HttpSession;
 
 /**
@@ -60,22 +62,24 @@ public class ControlLogin extends HttpServlet {
     public void iniciarSession(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
     	
-    	String username = request.getParameter("username");
+    	String email = request.getParameter("email");
         String password = request.getParameter("password");
         
         ActionUsuario oActionUsuario = new ActionUsuario();
-        Usuario oUsuario = new Usuario();
+        Usuario oUsuario = null;
 		try {
-			oUsuario = oActionUsuario.login(username, Encriptador.Encriptar(password));
+			oUsuario = oActionUsuario.login(email, Encriptador.Encriptar(password));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}            
         
-        if("".equals(oUsuario.getUsername())){
+        if(new Utilidades().esVacio(oUsuario)){ 
             response.getWriter().print(true);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }else{
         	HttpSession objSesion = request.getSession(true); 
             objSesion.setAttribute("user", oUsuario );
+            request.getRequestDispatcher("menu_inicio.jsp").forward(request, response);
         }
     }
     
@@ -83,6 +87,6 @@ public class ControlLogin extends HttpServlet {
             throws ServletException, IOException {
     	
     	request.getSession().invalidate();
-    	request.getRequestDispatcher("login_DataPets.jsp").forward(request, response);
+    	request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 }

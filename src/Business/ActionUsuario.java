@@ -7,7 +7,6 @@ package Business;
 
 import DAO.DaoPermisosUsuario;
 import DAO.DaoUsuario;
-import entity.Empleado;
 import entity.Filtro;
 import entity.PermisosUsuarios;
 import entity.Usuario;
@@ -161,9 +160,8 @@ public class ActionUsuario {
         return daoUsuario.existeUsuarioConUsername(username);
     }
     
-    public Usuario login(String username,String password) throws ClassNotFoundException, SQLException{
-        Connection conn = oConexion.openConexion();
-        oUsuario = daoUsuario.login(username, password, conn);
+    public Usuario login(String email,String password) throws ClassNotFoundException, SQLException{
+        oUsuario = daoUsuario.login(email, password, oConexion);
         return oUsuario;
     }   
     

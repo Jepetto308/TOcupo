@@ -348,20 +348,23 @@ public class DaoUsuario{
         return !"".equals(usuario);
     }
     
-    public Usuario login(String username,String password,Connection conexion){
+    public Usuario login(String email,String password,Conexion conexion) throws ClassNotFoundException{
         Usuario oUsuario = new Usuario();
         try {
-            Statement s = conexion.createStatement(); 
-            ResultSet rs = s.executeQuery ("SELECT A.numero_identificacion,A.nombre,A.apellidos,A.username,A.telefono,A.foto_perfil,A.sexo,A.codigo_rol,B.nombre_rol FROM usuarios A "
-                    + "INNER JOIN Roles B ON A.codigo_rol = B.codigo_rol"
-                    + " WHERE A.username = '"+username+"' AND A.password = '"+password+"'");
+            Statement s = conexion.openConexion().createStatement(); 
+            ResultSet rs = s.executeQuery ("CALL LOGIN('"+email+"','"+password+"');");
             while (rs.next()) 
             { 
-                 oUsuario.setNumeroIdentificacion(rs.getString(1));
-                 oUsuario.setNombre(rs.getString(2));
-                 oUsuario.setApellidos(rs.getString(3));
-                 oUsuario.setUsername(rs.getString(4));
-                 oUsuario.setTelefono(rs.getString(5));
+            	
+            	String mensajeInicial = rs.getString(1);
+            	if("NO EXISTE".equalsIgnoreCase(mensajeInicial)) {
+            		break;
+            	}
+                 oUsuario.setNumeroIdentificacion(rs.getString("NUMERO_DOCUMENTO"));
+                 oUsuario.setNombre(rs.getString("NOMBRES"));
+                 oUsuario.setApellidos(rs.getString("APELLIDOS"));
+//                 oUsuario.setUsername(rs.getString(4));
+                 oUsuario.setTelefono(rs.getString("TELEFONO"));
                  
 //                 Blob blob = rs.getBlob(6);
 //                 byte[] data = blob.getBytes(1, (int)blob.length());
@@ -373,15 +376,15 @@ public class DaoUsuario{
 //                    Logger.getLogger(DaoUsuario.class.getName()).log(Level.SEVERE, null, ex);
 //                }
                 
-                oUsuario.setSexo(rs.getString(7));
-                oUsuario.setCodigoRol(rs.getString(8));
-                oUsuario.setNombreRol(rs.getString(9));
+//                oUsuario.setSexo(rs.getString(7));
+//                oUsuario.setCodigoRol(rs.getString(8));
+//                oUsuario.setNombreRol(rs.getString(9));
             }
         } catch (SQLException ex) {
-            System.err.println("Error validando el Usuario con Usuario: "+username);
+            System.err.println("Error validando el Usuario con Usuario con Email: "+email);
             System.out.println(ex.getMessage());
         }finally{
-        	oConexion.closeConexion();
+        	conexion.closeConexion();
         }
         return oUsuario;
     }

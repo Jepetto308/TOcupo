@@ -1,34 +1,3 @@
-<?php
-session_start();
-include 'codigos/conexion.jsp';
-
-if(isset($_SESSION['cliente'])) {
-
-
-
-$correo = $_SESSION['cliente'] ;
-$log = mysqli_query($conexion,"SELECT * FROM cliente WHERE correo ='$correo'");
-
-if (mysqli_num_rows($log)>0) {
-                    $row = mysqli_fetch_array($log);
-                    $nombres = $row['primer_nombre'];
-                   $idindependiente = $row['idcliente'];
-                    
-                }
-
-
-$consulta = mysqli_query($conexion,"SELECT idindependiente,nombres,apellidos,tipo_categorias,nombre,titulo,nombre_foto FROM publicaciones 
-INNER JOIN CATEGORIAS 
-on publicaciones.categorias_idcategorias = categorias.idcategorias
-INNER JOIN SERVICIO 
-on publicaciones.servicio_idservicio = servicio.idservicio
-INNER JOIN INDEPENDIENTE
-on publicaciones.independiente_ndocumento = independiente.idindependiente where independiente.idindependiente = $idindependiente;");
-$num_publicaciones = mysqli_num_rows($consulta);
-
-?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -103,7 +72,6 @@ $num_publicaciones = mysqli_num_rows($consulta);
   <div class=" dropdown-toggle cursormano" data-toggle="dropdown">
    <h4> <span class="glyphicon glyphicon-user" style="color: #fff;"> </span>
    <font color="#fff">
-<?php echo "  ".$nombres.'<span class="caret"></span>'." "." "." " ?>
 </font>
 </h4>
   </div>
@@ -158,24 +126,9 @@ $num_publicaciones = mysqli_num_rows($consulta);
 <div class="main row well">
 <article class="col-lg-6 " >
 <!-- Modulacion -->
-<h3> Datos del independiente <?php 
-$id_independiente = $_POST['id_independiente'];
-#echo $id_independiente;
-?> </h3>
+<h3> Datos del independiente  </h3>
 <div class="col-xs-12 col-sm-12 col-md-4">
-<?php
-
-
-
-$log = mysqli_query($conexion,"SELECT * FROM independiente WHERE idindependiente ='$id_independiente'");
-
-if (mysqli_num_rows($log)>0) {
-                    $row = mysqli_fetch_array($log);
-                    $_SESSION["user"] = $row['correo'];
-                    echo '<br> <img src="imgperfiles/'.$row['nombre_foto'].'" width="170" heigth="170"> <br>';
-                    
-                }
-?></div><br>
+</div><br>
 <div class="col-xs-6 col-sm-6 col-md-6">
 
 <!-- Button trigger modal -->
@@ -303,19 +256,19 @@ if (mysqli_num_rows($log)>0) {
 
       </div>
 
-      <div class="col-xs-6 col-sm-6 col-md-4">
+<!--       <div class="col-xs-6 col-sm-6 col-md-4"> -->
       <?php  echo $row['nombres']."<br>"; ?>
         <?php  echo $row['apellidos']."<br>"; ?>
-        Poner <br>
-        Poner <br>
+<!--         Poner <br> -->
+<!--         Poner <br> -->
         <?php echo $row['ciudad_residencia']."<br>"; ?>
-        Poner<br><br>
-        <font color="#green"><b>En linea</b></font>
+<!--         Poner<br><br> -->
+<!--         <font color="#green"><b>En linea</b></font> -->
 
-        <!-- Reputacion -->
+<!--         Reputacion -->
        
        
-      </div>
+<!--       </div> -->
 
       
       </article>
@@ -436,8 +389,4 @@ if (mysqli_num_rows($log)>0) {
 	<script src="js/bootstrap.min.js"></script>
 	<!-- fin bootstrap -->
 </html>
-<?php
-}else{
-    echo '<script>window.location="menu_busqueda.jsp?mod=";</script>';
-}
 

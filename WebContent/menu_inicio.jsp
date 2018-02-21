@@ -1,37 +1,5 @@
-<?php
-session_start();
-include 'codigos/conexion.jsp';
-
-if(isset($_SESSION['user'])) {
-
-
-
-$correo = $_SESSION['user'] ;
-$log = mysqli_query($conexion,"SELECT * FROM independiente WHERE correo ='$correo'");
-
-if (mysqli_num_rows($log)>0) {
-                    $row = mysqli_fetch_array($log);
-                    $nombres = $row['nombres'];
-                   $idindependiente = $row['idindependiente'];
-                    
-                }
-
-
-$consulta = mysqli_query($conexion,"SELECT idindependiente,nombres,apellidos,tipo_categorias,nombre,titulo,nombre_foto FROM publicaciones 
-INNER JOIN CATEGORIAS 
-on publicaciones.categorias_idcategorias = categorias.idcategorias
-INNER JOIN SERVICIO 
-on publicaciones.servicio_idservicio = servicio.idservicio
-INNER JOIN INDEPENDIENTE
-on publicaciones.independiente_ndocumento = independiente.idindependiente where independiente.idindependiente = $idindependiente;");
-$num_publicaciones = mysqli_num_rows($consulta);
-
-?>
-
-
 
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -103,7 +71,6 @@ $num_publicaciones = mysqli_num_rows($consulta);
   <div class=" dropdown-toggle cursormano" data-toggle="dropdown">
    <h4> <span class="glyphicon glyphicon-user" style="color: #fff;"> </span>
    <font color="#fff">
-<?php echo "  ".$nombres.'<span class="caret"></span>'." "." "." " ?>
 </font>
 </h4>
   </div>
@@ -176,7 +143,7 @@ $num_publicaciones = mysqli_num_rows($consulta);
                             <table class="table">
                                 <tr>
                                     <td>
-                                        <a href="menu_inicio.jsp?mod=publicaciones">Publicaciones</a> <span class="label label-success"><?php echo $num_publicaciones; ?></span>
+                                        <a href="menu_inicio.jsp?mod=publicaciones">Publicaciones</a> <span class="label label-success">Numero Publicaciones</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -204,7 +171,7 @@ $num_publicaciones = mysqli_num_rows($consulta);
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-folder-close">
-                            </span>FacturaciÃ³n</a>
+                            </span>Facturación</a>
                         </h3>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse collapse">
@@ -236,7 +203,7 @@ $num_publicaciones = mysqli_num_rows($consulta);
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
-                            </span>ReputaciÃ³n</a>
+                            </span>Reputación</a>
                         </h3>
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse">
@@ -264,7 +231,7 @@ $num_publicaciones = mysqli_num_rows($consulta);
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user">
-                            </span>ConfiguraciÃ³n</a>
+                            </span>Configuración</a>
                         </h3>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
@@ -282,7 +249,7 @@ $num_publicaciones = mysqli_num_rows($consulta);
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="menu_inicio.jsp?mod=cambiar">Cambiar ContraseÃ±a</a>
+                                        <a href="menu_inicio.jsp?mod=cambiar">Cambiar Contraseña</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -329,7 +296,7 @@ $num_publicaciones = mysqli_num_rows($consulta);
 <!-- Pie de pagina -->
 <footer >
 <div class="container-fluid col-xs-12 col-sm-12" style="background-color: rgba(7, 7, 15, 0.1);">
-    <center><h6>Copyright Â© 2017 Tocupo Colombia LTDA. <font color="blue"> Trabaja con nosotros | TÃ©rminos y condiciones | PolÃ­ticas de privacidad |Ayuda | PQR 
+    <center><h6>Copyright Año 2017 Tocupo Colombia LTDA. <font color="blue"> Trabaja con nosotros | Términos y condiciones | Políticas de privacidad |Ayuda | PQR 
     <button type="button" class="btn btn-success colorbotones" >Descarga la APP gratis</button>
                     
     </div>

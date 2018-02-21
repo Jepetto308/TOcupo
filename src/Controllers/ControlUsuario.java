@@ -28,7 +28,6 @@ import Business.ActionRoles;
 import Business.ActionUsuario;
 import Utils.Encriptador;
 import Utils.Utilidades;
-import entity.Empleado;
 import entity.PermisosUsuarios;
 import entity.Usuario;
 

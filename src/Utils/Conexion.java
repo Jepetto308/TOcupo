@@ -22,17 +22,17 @@ import java.util.logging.Logger;
 public class Conexion {
 	
     private static Connection cnx = null;
-    private String url = "localhost";
-    private static String database = "datapets";
-    private String user = "root";
-    private String password = "jepetto987";
+    private static String url = "localhost";
+    private static String database = "tocupo";
+    private static String user = "root";
+    private static String password = "jepetto987";
     
-   public Connection openConexion() throws SQLException, ClassNotFoundException {
+   public static Connection openConexion() throws SQLException, ClassNotFoundException {
       if (cnx == null) {
          try {
             Class.forName("com.mysql.jdbc.Driver");
             cnx = DriverManager.getConnection("jdbc:mysql://"+url+"/"+database, user, password);
-//            System.out.println("Conectado a " + url + " .....Ok");
+            System.out.println("Conexion exitosa");
          } catch (SQLException ex) {
             throw new SQLException(ex);
          } catch (ClassNotFoundException ex) {
@@ -54,15 +54,14 @@ public class Conexion {
        return cnx;
    }
    
-//   public  void main (String[] args){
-//        try {
-//            obtener();
-//        } catch (SQLException ex) {
-//            Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (ClassNotFoundException ex) {
-//            Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//   }
-    
+   public static void main (String[] args){
+	   try {
+		openConexion();
+	} catch (ClassNotFoundException e) {
+		e.printStackTrace();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+   }
    
 }
