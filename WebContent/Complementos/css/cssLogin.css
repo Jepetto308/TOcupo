@@ -1,0 +1,123 @@
+
+/*LOGIN*/
+* {
+        margin: 0;
+        padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+.fondoLogin {
+	background:#F5F5F5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.mensajeError{
+    font-size: 20px;
+    color: red;
+}
+	
+.login-form {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 5%;
+	/* margin-bottom: 100px; */
+	max-width: 460px;
+	position: relative;
+}
+	.login-form > section {
+		padding: 35px 35px 25px 35px;
+		border-radius: 5px;
+	}
+	.login-form a {
+		color: #fff;
+	}
+	.login-form img {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 55px;
+	}
+
+form[role=login] {
+	font: 14px/2.2em Lato, serif;
+	color: #aaa;
+           font-family: 'Roboto', sans-serif;
+
+}	
+	form[role=login] input,
+	form[role=login] > button {
+		font-size: 20px;
+		padding: 10px 30px;
+	}
+	form[role=login] input {
+		color: #000;
+		background: rgba(180,180,180,.1);
+		border: none;
+		height: 2.6em;
+		padding: 10px 40px;
+		border-radius: 5px;
+		-webkit-box-shadow: inset 0 0 1px 1px rgba(150, 150, 150, .1);
+		   -moz-box-shadow: inset 0 0 1px 1px rgba(150, 150, 150, .1);
+		        box-shadow: inset 0 0 1px 1px rgba(150, 150, 150, .1);
+	}
+	form[role=login] > div {
+		margin: 30px 0;
+		position: relative; 
+	}
+	form[role=login] > button {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		background: #0c56a9;
+		border: 1px solid #0c4584;
+	}
+	
+.form-control + .glyphicon {
+    position: absolute;
+    left: 0;
+	top: 14%;
+    padding: 8px 0 0 17px;
+	font-size: 15px;
+	color: #757575;
+}
+.border-r{
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	
+}
+
+.alertaU_C{
+/*    margin-left:30% ;*/
+/*    font-weight: bold;*/
+        display: none;
+}                            
+
+.alertaU{
+/*    margin-left:30% ;*/
+/*    font-weight: bold;*/
+        display: none;
+}     
+
+.alertaC{
+/*    margin-left:30% ;*/
+/*    font-weight: bold;*/
+        display: none;
+}     
+.btn-primary {
+    color: #fff !important;
+    background-color: #428bca !important;
+    border-color: #357ebd !important;
+}

@@ -1,0 +1,2833 @@
+* {
+        margin: 0;
+        padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	
+}
+
+/*MENU*/
+.fondo-menu{
+   background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    line-height: 18px;
+    padding-top: 55px;
+}
+
+a{
+    text-decoration:none;
+    color: #fff;
+}
+
+.btn-menu{
+    padding: 20px;
+    display: none;
+    background: #0d2c44;
+    color: #fff;
+     text-decoration:none;
+}
+                                      
+.btn-menu .icono{
+    float:right;
+}   
+
+.contenedor-menu{
+    width: 20%;
+    min-width: 300px;
+    margin-top:  100px;
+    margin-left: 10px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    line-height: 18px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -wekit-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -mox-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+
+.contenedor-menu .Menu{
+    width: 100%;
+}
+
+.contenedor-menu ul{
+    list-style: none;
+}
+
+.contenedor-menu .Menu li a{
+    color:#494949;
+    display:block;
+    padding: 15px 20px;
+    background: #e9e9e9;
+   
+}
+
+.contenedor-menu .Menu li a:hover{
+    background: #1a95d5;
+    color: #fff;
+}
+
+
+.contenedor-menu .Menu .icono{
+    font-size: 12px;
+   
+}
+
+
+.izquierda {
+    float: left;
+    margin-right:10px; 
+}
+
+.derecha {
+      float: right;
+    margin-left:10px; 
+}
+
+
+.contenedor-menu .Menu ul{
+    display: none;
+}
+
+.contenedor-menu .Menu ul li a{
+    background: #424242;
+    color: #e9e9e9;
+}
+
+.contenedor-menu .Menu .activado > a {
+    background: #1a95d5;
+    color:#fff;
+}
+
+
+@media screen and (max-width:450px){
+    .fondo-menu{
+        padding-top: 80px; 
+    }
+    .contenedor-menu{
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        top:0;
+        z-index: 1000;
+    }
+    
+    .btn-menu{
+        display: block;
+    }
+    
+    .contenedor-menu .Menu{
+        display: none;
+    }
+}
+
+/*Header*/
+
+.logueado {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    text-align: right;
+}
+
+.encabezado {
+    background: #4357ad;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.navH {
+    width:86%;
+    max-width: 1000;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    display: inline-block;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.navH .logo img{
+    vertical-align: top;
+   height: 100px;
+}
+
+.navH .logueado label{
+    color: #fff;
+    text-decoration: none;
+    display:block;
+    padding: 1em;
+    text-align: center;
+}
+
+.navH .logueado label i {
+    margin-right: 8px;
+}
+
+/*Efectos del head*/
+
+.headroom {
+    transition: transform .3s ease;
+}
+
+.headroom--pinned{
+    transform: translateY(0%);
+}
+
+.headroom--unpinned{
+    transform: translateY(-100%);
+}
+
+
+/*------------------Empleados---------------------------*/
+
+.contenedor-empleado{
+    background: #e9e9e9;
+    width:  930px;
+    height: 400px;
+    float: right;
+    margin: 98px 11px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -wekit-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -mox-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+
+.contenedor-empleado .form-empleados{
+    width: 100%;
+    height: 100%;
+    /*background: red;*/
+}
+
+.titulo-lista{
+    width: 100%;
+    height: 40px;
+    background: #424242;
+    color: white;
+    text-align: center;
+   
+   font-family: 'Roboto', sans-serif;
+    font-size: 9pt;
+    line-height:40px;
+}
+
+.Lfiltro1{
+    float: left;
+    font-size: 10pt;
+    margin-left: 1%;
+    margin-top: 20px;
+    margin-right: 35px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.Lfiltro2{
+    float: left;
+    font-size: 10pt;
+    margin-left: 1%;
+    margin-top: 7px;
+    position: absolute;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.filtrar1{
+    width: 200px;
+    height: 18px;
+    display: block;
+    right: 35px;
+    margin-top: 20px;
+    margin-right: 95px;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.filtrar2{
+    width: 300px;
+    height: 18px;
+    display: block;
+    right: 35px;
+    margin-top: 7px;
+    margin-right: 478px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.boton-formulario{
+     width: 120px;
+    height: 27px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin:-17px 670px;
+  position: absolute;
+  font-size: 11pt;
+  line-height: 25px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808;
+}
+.boton-formulario:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+}
+.boton-formulario:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+       box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+
+.boton-formFiltrar{
+      width: 80px;
+    height: 27px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin:-17px 520px;
+  position: absolute;
+  font-size: 11pt;
+  line-height: 25px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808; 
+}
+.boton-formFiltrar:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+
+}
+.boton-formFiltrar:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+      box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+.filtro{
+    margin-left: 8px;
+}
+
+.btn-exportarEmpleado{
+      width: 90px;
+    height: 18px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin:30px 12px;
+/*  position: absolute;*/
+  font-size: 9pt;
+  line-height: 12px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808; 
+}
+.btn-exportarEmpleado:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+
+}
+.btn-exportarEmpleado:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+      box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+
+.exportar{
+    margin-left: 8px; 
+    line-height: 18px;
+}
+/*tabla*/
+
+
+.TablaRegistros
+{
+ width: 100%;
+ background-color: #f5f5f5;
+ margin-top: -15px;
+}
+.EncabezadoRegistros{
+	background: #007fff;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 10pt;
+        color: #fff;
+        padding: 9px;
+        border-radius: 10px;
+}
+
+.listadoEmpleado{
+    background: #d5d5d5;
+    font-size: 9pt;
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+td a{
+   color: #007fff; 
+}
+
+td a:hover{
+   color: #F43308;
+   background-color: RGB (244, 51, 8) ; 
+   font-weight: bold;
+   
+}
+
+.irA{
+    width: 30px;
+    height: 18px;
+    color: white;
+    background: #2aabd2;
+     font-family: 'Roboto', sans-serif;
+    border: solid 1px #007fff; 
+    cursor:pointer;
+}
+
+.irA:hover{
+     background: #2bbbd4;
+}
+
+.listaEmp{
+    text-align: center;
+}
+
+.modificarICO{
+   font-size: 18pt;
+}
+
+
+
+.modificar-datos{
+    text-align: center;
+    /* background: #fff; */
+    color: #007fff;
+    text-decoration: underline;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.modificar-datos:hover{
+    background: #007fff;
+    color: white;
+    font-weight: bold;
+}
+.modificar-datosA:hover{
+       box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px  #080808;
+  -moz-box-shadow: 2px 3px 2px #080808;  
+    color: white;
+}
+
+.modificar-datos:active{
+    color:  #007fff;
+    background: white;
+    font-weight: 100;
+}
+.modificar-datosA:active{
+       box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 2px 30px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808;  
+    color: #007fff;
+}
+/*----campos Empleados-----*/
+/*.tipo_documentoU
+{
+  width:95px;
+ height:17px;
+ padding-left: 3px;
+}*/
+
+.ID_Empleado
+{
+  width:140px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.Nom_Empleado
+{
+     width:140px;
+ height:17px;
+ padding-left: 3px;
+}
+
+/*.ONom_Usuario
+{
+     width:170px;
+ height:17px;
+ padding-left: 3px;
+}*/
+
+.Ape_Empleado
+{
+     width:150px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.SApe_Empleado
+{
+     width:150px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.TEL_Empleado
+{
+    width:120px;
+ height:17px;
+ padding-left: 3px;
+}
+
+
+.CEL-Empleado
+{
+     width:160px;
+ height:17px;
+ padding-left: 3px;
+}
+
+/*.Fax_Usuario{
+         width:120px;
+ height:17px;
+ padding-left: 3px; 
+}*/
+
+/*.E-mail_Clientes
+{
+      width:120px;
+ height:17px;
+ padding-left: 3px;
+}*/
+.campo-modificar
+{
+    width:100px;
+ height:17px;
+ padding-left: 3px;
+ text-align: center;
+}
+
+/*-------------------Formulario empleados-----------------------*/
+
+.formulario-empleado{
+    width: 800px;
+    height: 700px;
+    border: 6px #428bca double;
+    float: right;
+    margin: 99px 70px;
+     box-shadow: 2px 1px 4px 3px #080808;
+  -webkit-box-shadow: 2px 1px 4px 3px #080808;
+  -moz-box-shadow: 2px 1px 4px 3px #080808;
+    
+}
+
+.Lform-empleado{
+    display:block;
+    margin: 16px 40px;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#000;
+}
+
+.Iform-empleado{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 320px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff; 
+}
+
+.Iform-empleadoPais1{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 120px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+
+.Iform-empleadoPais2{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 320px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 393px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.Iform-empleadoMunicipio1{
+       font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 120px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;   
+}
+
+.Iform-empleadoMunicipio2{
+  font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 320px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 393px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.Iform-empleadoS{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 320px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+.Iform-empleadoS:hover{
+    background: #a3a3a3;
+    color: #ffffff;
+}
+
+.div-Dpersonales{
+    margin-top: 70px;
+/*    background: red;*/
+    width: 100%;
+   
+}
+.div-ubicacionF{
+/*    background: aqua;*/
+   width: 100%;
+   margin-top: 35px;
+   margin-bottom: 35px;
+}
+.div-Dadicionales{
+/*    background: yellow;*/
+    width: 100%;
+    
+}
+.modal-pais{
+    width: 30px;
+    height: 22px;
+    float: right;
+    margin-right:35px;
+    margin-top: -3px;
+    background: #f5f5f5;
+/*   box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;*/
+}
+.modal-pais:hover{
+    background: #ffffff;
+  box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;
+}
+
+.modal-municipio{
+     width: 30px;
+    height: 22px;
+    float: right;
+    margin-right:35px;
+    margin-top: -3px;
+    background: #f5f5f5;
+}
+
+.modal-municipio:hover{
+  background: #ffffff;
+  box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;
+}
+
+.DB-formEmpleado{
+    width: 70%;
+    height: 60px;
+    margin: 20px 255px;
+/*    background: aqua;*/
+}
+
+.btn-formEmpleado1{
+    width: 80px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #27ae60;
+    background-color: rgb(39, 174, 96);
+    border: #29ae61 solid 2px;
+      box-shadow: 0px 3px 0px 1px #1e8449;
+  -webkit-box-shadow: 0px 3px 0px 1px #1e8449;
+  -moz-box-shadow: 0px 3px 0px 1px #1e8449;
+  border-radius: 4px;
+  -wekit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-formEmpleado1:hover{
+    background: #239b56;
+    background-color: rgb(35, 155, 86);
+     box-shadow: 0px 3px 0px 1px #196f3d;
+  -webkit-box-shadow: 0px 3px 0px 1px #196f3d;
+  -moz-box-shadow: 0px 3px 0px 1px #196f3d;
+}
+.btn-formEmpleado1:active{
+     background: #27ae60;
+    background-color: rgb(39, 174, 96);
+      box-shadow: 0px 2px 0px 3px #1e8449;
+  -webkit-box-shadow: 0px 2px 0px 3px #1e8449;
+  -moz-box-shadow: 0px 2px 0px 3px #1e8449;
+}
+
+.btn-formEmpleado2{
+    width: 80px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #3498db;
+    background-color: rgb(52, 152, 219);
+    border: #3699db solid 2px;
+      box-shadow: 0px 5px 0px 1px #2471a3;
+  -webkit-box-shadow: 0px 6px 0px 1px #2471a3;
+  -moz-box-shadow: 0px 5px 0px 1px #2471a3;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-formEmpleado2:hover{
+    background: #2874a6;
+    background-color: rgb(40, 116, 166);
+     box-shadow: 0px 7px 0px 2px #1a5276;
+  -webkit-box-shadow: 0px 7px 0px 2px #1a5276;
+  -moz-box-shadow: 0px 7px 0px 2px #1a5276;
+}
+.btn-formEmpleado2:active{
+     background: #3498db;
+    background-color: rgb(52, 152, 219);
+      box-shadow: 0px 2px 0px 3px #2471a3;
+  -webkit-box-shadow: 0px 2px 0px 3px #2471a3;
+  -moz-box-shadow: 0px 2px 0px 3px #2471a3;
+}
+
+
+.btn-formEmpleado3{
+    width: 80px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #e74c3c;
+    background-color: rgb(231, 76, 60);
+    border: #e94c4c solid 2px;
+      box-shadow: 0px 6px 0px 1px #b03a2e;
+  -webkit-box-shadow: 0px 6px 0px 1px #b03a2e;
+  -moz-box-shadow: 0px 6px 0px 1px #b03a2e;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-formEmpleado3:hover{
+    background: #c0392b;
+    background-color: rgb(192, 57, 43);
+     box-shadow: 0px 7px 0px 2px #641e16;
+  -webkit-box-shadow: 0px 7px 0px 2px #641e16;
+  -moz-box-shadow: 0px 7px 0px 2px #641e16;
+}
+.btn-formEmpleado3:active{
+      background: #e74c3c;
+    background-color: rgb(231, 76, 60);
+      box-shadow: 0px 2px 0px 3px #b03a2e;
+  -webkit-box-shadow: 0px 2px 0px 3px #b03a2e;
+  -moz-box-shadow: 0px 2px 0px 3px #b03a2e;
+}
+
+
+.btn-formEmpleado4{
+ width: 80px;
+  height: 40px;
+margin: 10px 5px;
+    background: #909497;
+    background-color: rgb(144, 148, 151);
+    border: #909698 solid 2px;
+    box-shadow: 0px 6px 0px 1px #4d5656;
+  -webkit-box-shadow: 0px 6px 0px 1px #4d5656;
+  -moz-box-shadow: 0px 6px 0px 1px #4d5656;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  line-height: 25px;
+  font-size:13px;
+  padding: 7px;
+}
+
+.btn-formEmpleado4:hover{
+    background: #7b7d7d;
+    background-color: rgb(123, 125, 125);
+     box-shadow: 0px 7px 0px 2px #000;
+  -webkit-box-shadow: 0px 7px 0px 2px #000;
+  -moz-box-shadow: 0px 7px 0px 2px #000;
+}
+.btn-formEmpleado4:active{
+     background: #909497;
+    background-color: rgb(144, 148, 151);
+     box-shadow: 0px 2px 0px 3px #4d5656;
+  -webkit-box-shadow: 0px 2px 0px 3px #4d5656;
+  -moz-box-shadow: 0px 2px 0px 3px #4d5656;
+}
+/*
+.btn-formUsuario5{
+    width: 80px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #e67e22;
+    background-color: rgb(230, 126, 34);
+    border: #e77e22 solid 2px;
+      box-shadow: 0px 5px 0px 1px #a04000;
+  -webkit-box-shadow: 0px 5px 0px 1px #a04000;
+  -moz-box-shadow: 0px 5px 0px 1px #a04000;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-formUsuario5:hover{
+    background: #d35400;
+    background-color: rgb(211, 84, 0);
+     box-shadow: 0px 5px 0px 1px #6e2c00;
+  -webkit-box-shadow: 0px 5px 0px 1px #6e1c00;
+  -moz-box-shadow: 0px 5px 0px 1px #6e2c00;
+}
+
+
+.btn-formUsuario6{
+    width: 80px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #f1c40f;
+    background-color: rgb(241, 196, 15);
+    border: #f2c50f solid 2px;
+      box-shadow: 0px 5px 0px 1px #d68910;
+  -webkit-box-shadow: 0px 5px 0px 1px #d68910;
+  -moz-box-shadow: 0px 5px 0px 1px #d68910;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-formUsuario6:hover{
+    background: #d4ac0d;
+    background-color: rgb(212, 172, 13);
+     box-shadow: 0px 5px 0px 1px #9c640c;
+  -webkit-box-shadow: 0px 5px 0px 1px #7e5109;
+  -moz-box-shadow: 0px 5px 0px 1px #7e5109;
+}
+*/
+
+/*-----------Tabla Clientes------*/
+
+.ID_Clientes
+{
+  width:140px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.Nom_Clientes
+{
+     width:140px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.Ape_Clientes
+{
+     width:150px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.SApe_Clientes{
+   width:150px;
+ height:17px;
+ padding-left: 3px;
+}
+.TEL_Clientes
+{
+     width:120px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.CEL_Clientes
+{
+     width:160px;
+ height:17px;
+ padding-left: 3px;
+}
+
+
+
+
+
+
+
+
+/*-------------------Formulario Clientes------------*/
+.modal-deCliente{
+    position: fixed;
+    background: #000;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.formulario-clientes{
+    width: 800px;
+    height: 725px;
+    border: 6px #428bca double;
+    float: right;
+    margin: 99px 70px;
+     box-shadow: 4px 3px 6px 5px #080808;
+  -webkit-box-shadow: 4px 3px 6px 5px #080808;
+  -moz-box-shadow: 4px 3px 6px 5px #080808;
+    
+}
+
+.Iform-ClientePais1{
+     font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 120px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.Iform-ClientePais2{
+  font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 320px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 393px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.Iform-ClienteMunicipio1{
+       font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 120px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;     
+}
+
+.Iform-ClienteMunicipio2{
+  font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 320px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 393px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+
+
+/*----------------------------------Citas------------------------------------------------------------------------------*/
+.contenedor-citas{
+     background: #e9e9e9;
+    width:  920px;
+    height: 500px;
+    float: right;
+    margin: 98px 12px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -wekit-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -mox-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+
+.div-lCitas{
+    margin: 20px 15px;
+    height: 140px;
+    width: 500px;
+}
+
+.LfiltroCita{
+    font-size: 10pt;
+    margin: 8px 2px;
+    left: 470px;
+    font-family: 'Nunito Sans', sans-serif;
+    display: block;
+}
+
+.IfiltrarCita1{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 100px;
+    height: 18px;
+    display: block;
+    font-size: 10pt;
+     margin-top: -2px;  
+    margin-left: 120px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+.IfiltrarCita2{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 200px;
+    height: 18px;
+    display: block;
+    font-size: 10pt;
+     margin-top: -2px;  
+    margin-left: 230px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.modalCita{
+    width: 29px;
+    height: 25px;
+    float: right;
+    margin-right: 35px;
+    margin-top: -5px;
+}
+
+.modalCita:hover{
+    background: white;
+      box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;
+}
+.Ifiltrar-numeroCita{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 80px;
+    height: 18px;
+    display: block;
+    font-size: 10pt;
+     margin-top: -2px;  
+    margin-left: 120px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.Ifiltrar-fechaCita1{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 115px;
+    height: 18px;
+    display: block;
+    font-size: 9pt;
+     margin-top: -2px;  
+    margin-left: 120px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+
+.Ifiltrar-fechaCita2{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 115px;
+    height: 18px;
+    display: block;
+    font-size: 9pt;
+     margin-top: -2px;  
+    margin-left: 264px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.tipoServicio-cita{
+     width: 155px;
+    height: 18px;
+     margin-top: 7px;
+     display: block;
+      margin-top: -2px;  
+    margin-left: 120px;
+     position: absolute;
+     border:#2bbbd4 solid 0.5px;
+}
+
+.tipoServicio-cita:hover{
+  background: #000;
+  color: #ffffff;
+}
+.estado-cita{
+     width: 150px;
+    height: 18px;
+     margin-top: 7px;
+     display: block;
+      margin-top: -2px;  
+    margin-left: 120px;
+     position: absolute;
+     border:#2bbbd4 solid 0.5px;
+}
+
+.estado-cita:hover{
+  background: #000;
+  color: #ffffff;
+}
+
+.boton-formularioC{
+     width: 120px;
+    height: 27px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin:-150px 760px;
+  position: absolute;
+  font-size: 11pt;
+  line-height: 25px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808;
+}
+.boton-formularioC:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+}
+.boton-formularioC:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+       box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+
+.nCita{
+  margin-left: 5px;
+}
+
+.boton-formFiltrarC{
+    display:inline-block;
+      width: 80px;
+    height: 27px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin:-110px 600px;
+  position: absolute;
+  font-size: 11pt;
+  line-height: 25px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808; 
+}
+.boton-formFiltrarC:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+
+}
+.boton-formFiltrarC:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+      box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+
+
+.btn-exportarCita{
+    display: inline-block;
+      width: 90px;
+    height: 18px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin-left: 18px;
+    top: 150px;
+  position: absolute;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-top: 200px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808; 
+}
+.btn-exportarCita:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+
+}
+.btn-exportarCita:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+      box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+
+
+.TablaRegistros-citas{
+ width: 100%;
+ background-color: #f5f5f5;
+ margin-top: 25px;
+}
+
+
+
+
+.buttonImage{
+    width: 20px;
+    height: 20px;
+}
+
+/*.calendario{
+    margin: 200px;
+    width: 400px;
+    height: 40px;
+}*/
+
+
+/*------------TABLA CITA----*/
+.num_Cita
+{
+ width:65px;
+ height:17px;
+ padding-left: 5px;
+}
+
+.Clientes-cita
+{
+ width:190px;
+ height:17px;
+ padding-left: 5px;
+}
+
+.fecha-cita
+{
+   width:140px;
+ height:17px;
+ padding-left: 5px;
+}
+
+.servicio-cita
+{
+width:180px;
+ height:17px;
+ padding-left: 5px;
+}
+
+.estado-citaT
+{
+    width:100px;
+ height:17px;
+ padding-left: 5px;
+}
+
+
+
+
+
+/*----------------asignacion de Citas Formulario*/
+
+
+.formulario-citas{
+    width: 800px;
+    height: 500px;
+    border: 6px #428bca double;
+    float: right;
+    margin: 99px 70px;
+    box-shadow: 2px 1px 4px 3px #080808;
+    -webkit-box-shadow: 2px 1px 4px 3px #080808;
+    -moz-box-shadow: 2px 1px 4px 3px #080808;
+    
+}
+
+.fecha-calendario{
+    width: 29px;
+    height: 25px;
+    float: right;
+    margin-right: 155px;
+    margin-top: -5px;
+}
+
+.fecha-calendario:hover{
+        background: white;
+      box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;
+} 
+
+
+.Lform-Fcita{
+    display:block;
+    margin: 30px 40px;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#000;
+}
+
+.Iform-Ncita{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 150px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+     border: solid 1px #007fff; 
+}
+
+.formCita-codCliente{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 110px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+     border: solid 1px #007fff;  
+}
+
+.formCita-nomCliente{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 350px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 352px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+     border: solid 1px #007fff;  
+}
+
+.modal-deClienteC{
+    width: 29px;
+    height: 25px;
+    float: right;
+    margin-right: 47px;
+    margin-top: -5px;
+}
+
+.modal-deClienteC:hover{
+        background: white;
+      box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;
+}
+
+.input-calendario{font-family: 'Nunito Sans', sans-serif;display:table-cell;background: #ffffff;color:black;width: 190px;height: 22px;margin-top: -4px;margin-left: 230px;position: absolute;text-align:center;font-weight: bold;font-size: 10pt;box-shadow: 1px 0px 2px 1px #080808;-webkit-box-shadow: 1px 0px 2px 1px #080808;-moz-box-shadow: 1px 0px 2px 1px #080808;border: solid 1px #007fff;}
+
+.ui-datepicker-trigger{
+     width: 30px;
+     height: 27px;
+     float: right;
+     margin-right: 235px;
+     margin-top: -8px;
+     cursor: pointer;
+     border-radius: 3px;
+}
+
+
+.ui-datepicker-trigger:hover{
+  background: white;
+      box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;
+}
+
+
+
+.Iform-citaS{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 290px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+.Iform-citaS:hover{
+    background: #000;
+    color: #ffffff;
+}
+
+.Lestado-cita{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #b1b1b1;
+    color:#000;
+    width: 290px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+}
+.div-Dpersonales{
+    margin-top: 50px;
+/*    background: red;*/
+    width: 100%;
+   
+}
+
+.DB-formCitas{
+    width: 55%;
+    height: 60px;
+    margin: 20px 220px;
+/*    background: aqua;*/
+}
+
+.DB-formCitas2{
+    width: 75%;
+    height: 60px;
+    margin: 20px 35px;
+/*    background: aqua;*/
+}
+
+.btn-formCitasCon{
+    width: 90px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #1560F6;
+    background-color: rgb(21, 26, 246);
+    border: #1560F7 solid 2px;
+      box-shadow: 0px 5px 0px 1px #263DBD;
+  -webkit-box-shadow: 0px 6px 0px 1px #263DBD;
+  -moz-box-shadow: 0px 5px 0px 1px #263DBD;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-formCitasCon:hover{
+    background: #2c25c6;
+    background-color: rgb(44, 37, 198);
+     box-shadow: 0px 7px 0px 2px #181ba1;
+  -webkit-box-shadow: 0px 7px 0px 2px #181ba1;
+  -moz-box-shadow: 0px 7px 0px 2px #181ba1;
+}
+.btn-formCitasCon:active{
+     background: #1560F6;
+     background-color: rgb(21, 26, 246);
+      box-shadow: 0px 2px 0px 3px #263DBD;
+  -webkit-box-shadow: 0px 2px 0px 3px #263DBD;
+  -moz-box-shadow: 0px 2px 0px 3px #263DBD;
+}
+
+.btn-formCitasAnu{
+    width: 80px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #f39c12;
+    background-color: rgb(243, 156, 18);
+    border: #f39c23 solid 2px;
+      box-shadow: 0px 5px 0px 1px #d68910;
+  -webkit-box-shadow: 0px 6px 0px 1px #d68910;
+  -moz-box-shadow: 0px 5px 0px 1px #d68910;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-formCitasAnu:hover{
+    background: #e67e22;
+    background-color: rgb(230, 126, 34);
+     box-shadow: 0px 7px 0px 2px #af601a;
+  -webkit-box-shadow: 0px 7px 0px 2px #af601a ;
+  -moz-box-shadow: 0px 7px 0px 2px #af601a ;
+}
+.btn-formCitasAnu:active{
+    background: #f39c12;
+    background-color: rgb(243, 156, 18);
+      box-shadow: 0px 2px 0px 3px #d68910;
+  -webkit-box-shadow: 0px 2px 0px 3px #d68910;
+  -moz-box-shadow: 0px 2px 0px 3px #d68910;
+}
+
+.btn-formCitasDes{
+    width: 110px;
+    height: 40px;
+    margin: 10px 5px;
+    background: #1abc9c;
+    background-color: rgb(26, 188, 156);
+    border: #1abc9d solid 2px;
+      box-shadow: 0px 5px 0px 1px #148f77;
+  -webkit-box-shadow: 0px 6px 0px 1px #148f77;
+  -moz-box-shadow: 0px 5px 0px 1px #148f77;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-formCitasDes:hover{
+    background: #16a085;
+    background-color: rgb(22, 160, 133);
+     box-shadow: 0px 7px 0px 2px #117a65;
+  -webkit-box-shadow: 0px 7px 0px 2px #117a65 ;
+  -moz-box-shadow: 0px 7px 0px 2px #117a65 ;
+}
+.btn-formCitasDes:active{
+    background: #1abc9c;
+    background-color: rgb(26, 188, 156);
+      box-shadow: 0px 2px 0px 3px #17a589;
+  -webkit-box-shadow: 0px 2px 0px 3px #17a589;
+  -moz-box-shadow: 0px 2px 0px 3px #17a589;
+}
+
+
+
+/*-----------Informe general de Citas________________*/
+
+.LinformeC{
+    display:block;
+    margin: 50px 30px;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#000;
+}
+
+.IinformeC-cod{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 130px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.IinformeC-nom{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 350px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 405px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+.modalIC{
+    width: 29px;
+    height: 25px;
+    float: right;
+    margin-right: 135px;
+    margin-top: -5px;
+}
+.modalIC:hover{
+    background: white;
+      box-shadow: 1px 0px 3px 2px #080808;
+  -webkit-box-shadow: 1px 0px 3px 2px #080808;
+  -moz-box-shadow: 1px 0px 3px 2px #080808;
+}
+
+
+.IinformeC-fecha1{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000000;
+    width: 130px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+
+.IinformeC-fecha2{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 130px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 526px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+
+
+
+
+.IinformeC-Select{
+   font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 320px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 260px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 12pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.IinformeC-Select:hover{
+    background: #000;
+    color: #ffffff;
+}
+
+.Div-LinformeC{
+    width: 100%;
+    
+    height: 150px;
+    margin-top: 90px;
+    
+
+}
+
+
+.Dbtn-informeC{
+    width: 400px;
+    height: 80px;
+    padding: 10px;
+/*    background: #2471a3;*/
+    margin: 40px 30px;
+}
+
+.btn-informeCver{
+  width: 100px;
+    height: 40px;
+    margin: 10px 100px;
+    background:#9b59b6;
+    background-color: rgb(155, 89, 182);
+    border: #9b49b5 solid 2px;
+      box-shadow: 0px 5px 0px 1px #512e5f;
+  -webkit-box-shadow: 0px 5px 0px 1px #512e5f;
+  -moz-box-shadow: 0px 5px 0px 1px #512e5f;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-informeCver:hover{
+   background: #8e44ad;
+    background-color: rgb(142, 68, 173);
+     box-shadow: 0px 7px 0px 2px #4a235a;
+  -webkit-box-shadow: 0px 7px 0px 2px #4a235a;
+  -moz-box-shadow: 0px 7px 0px 2px #4a235a;
+}
+.btn-informeCver:active{
+     background:#9b59b6;
+    background-color: rgb(155, 89, 182);
+     box-shadow: 0px 2px 0px 3px #512e5f;
+  -webkit-box-shadow: 0px 2px 0px 3px#512e5f;
+  -moz-box-shadow: 0px 2px 0px 3px #512e5f;
+}
+
+/*-------------------USUARIOS---------------------------*/
+
+.contenedor-usuario{
+    background: #e9e9e9;
+    width:  930px;
+    height: 520px;
+    float: right;
+    margin: 98px 11px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -wekit-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -mox-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+
+.Ilogin-Usu{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 180px;
+    height: 18px;
+    display: block;
+    font-size: 10pt;
+     margin-top: -2px;  
+    margin-left: 128px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.select-rol{
+     width: 160px;
+    height: 18px;
+     margin-top: 7px;
+     display: block;
+      margin-top: -2px;  
+    margin-left: 128px;
+     position: absolute;
+     border:#2bbbd4 solid 0.5px;
+}
+
+.select-rol:hover{
+  background: #000;
+  color: #ffffff;
+}
+.estado-usuarioS{
+     width: 100px;
+    height: 18px;
+     margin-top: 7px;
+     display: block;
+      margin-top: -2px;  
+    margin-left: 128px;
+     position: absolute;
+     border:#2bbbd4 solid 0.5px;
+}
+
+.estado-usuarioS:hover{
+  background: #000;
+  color: #ffffff;
+}
+
+.Iidentificacion-usu{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 150px;
+    height: 18px;
+    display: block;
+    font-size: 10pt;
+     margin-top: -2px;  
+    margin-left: 128px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.Inom-persona{ 
+    text-align:center;
+    background: #ffffff;
+    color:#000;
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    width: 330px;
+    height: 18px;
+    display: block;
+    font-size: 10pt;
+     margin-top: -2px;  
+    margin-left: 128px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.btn-exportarUsuario{
+    display: inline-block;
+      width: 90px;
+    height: 18px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin-left: 18px;
+    top: 155px;
+  position: absolute;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-top: 200px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808; 
+}
+.btn-exportarUsuario:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+
+}
+.btn-exportarUsuario:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+      box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+
+.TablaRegistros-usuarios{
+ width: 100%;
+ background-color: #f5f5f5;
+ margin-top: 32px;
+}
+
+//tabla Usuario
+
+.login
+{
+  width:95px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.cod-rol
+{
+ width:95px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.nom-rol
+{
+     width:130px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.tipo-Usu
+{
+   width:50px;
+ height:17px;
+ padding-left: 3px;
+}
+.num-Identificacion
+{
+  width:95px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.nom-persona
+{
+     width:150px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.info_adicional
+{
+ width:160px;
+ height:17px;
+ padding-left: 3px;
+}
+
+#disponible{
+	font-family: 'Nunito Sans', sans-serif;
+	background: transparent;
+    color: black;
+    height: 22px;
+    display: none;
+    margin-top: -4px;
+    border: none;
+    margin-left: 455px;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10pt;
+    /* box-shadow: 1px 0px 2px 1px #080808; */
+    /* -webkit-box-shadow: 1px 0px 2px 1px #080808; */
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+    /* border: solid 1px #007fff; */
+    padding: 2px;
+}
+
+/*------------------- Formulario USUARIO--------------*/
+
+.formulario-usuarios{
+    width: 800px;
+    height: 650px;
+    border: 6px #428bca double;
+    float: right;
+    margin: 99px 70px;
+     box-shadow: 2px 1px 4px 3px #080808;
+  -webkit-box-shadow: 2px 1px 4px 3px #080808;
+  -moz-box-shadow: 2px 1px 4px 3px #080808;
+    
+}
+
+#verPass{
+	font-family: 'Nunito Sans', sans-serif;
+	display: block;
+	background: #ffffff;
+	color: black;
+	height: 22px;
+	margin-top: -4px;
+	margin-left: 465px;
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	font-size: 10pt;
+	box-shadow: 1px 0px 2px 1px #080808;
+	-webkit-box-shadow: 1px 0px 2px 1px #080808;
+	-moz-box-shadow: 1px 0px 2px 1px #080808;
+	border: solid 1px #007fff;
+	padding: 2px;
+}
+
+.Iform-loginUsuario{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 220px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff; 
+}
+
+
+.IformRolS{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 190px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+.IformRolS:hover{
+    background: #000;
+    color: #ffffff;
+}
+
+.formUsu-pass{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 225px;
+    height: 22px;
+    margin-top: -4px;
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+    border: solid 1px #007fff;
+}
+
+.IformUsu-empleadoS{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 150px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+.IformUsu-empleadoS:hover{
+    background: #000;
+    color: #ffffff;
+}
+
+.IformUsu-EusuarioS{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 115px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+.IformUsu-EusuarioS:hover{
+    background: #000;
+    color: #ffffff;
+}
+
+.formUsu-identificacion{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 200px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+     box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+
+.formUsu-Nusuario{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 470px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.div-IadicionalUsu{
+    margin-top: 40px;
+    height: 80px;
+/*    background-color: #117a65;*/
+}
+
+.DB-formUsuario{
+    width: 40%;
+    height: 10%;
+    margin: -15px 380px;
+/*    background-color: royalblue;*/
+    
+}
+
+.DB-formUsuario2{
+    width: 25%;
+    height: 10%;
+    margin: 10px 430px;
+/*    background-color: gold;*/
+    
+}
+
+.btnPermisos-usuario{
+  width: 190px;
+    height: 27px;
+    margin: 35px 45px;
+    background:#1976d2;
+    background-color: rgb(25, 118, 210);
+    border: #1977d4 solid 2px;
+      box-shadow: 0px 5px 0px 1px #303f9f;
+  -webkit-box-shadow: 0px 5px 0px 1px #303f9f;
+  -moz-box-shadow: 0px 5px 0px 1px #303f9f;
+  border-radius: 50px;
+  -wekit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+}
+
+.btnPermisos-usuario:hover{
+   background: #0d47a1;
+    background-color: rgb(13, 71, 161);
+     box-shadow: 0px 7px 0px 2px #000000;
+  -webkit-box-shadow: 0px 7px 0px 2px #000000;
+  -moz-box-shadow: 0px 7px 0px 2px #000000;
+}
+.btnPermisos-usuario:active{
+        background:#1976d2;
+    background-color: rgb(25, 118, 210);
+     box-shadow: 0px 2px 0px 3px  #303f9f;
+  -webkit-box-shadow: 0px 2px 0px 3px  #303f9f;
+  -moz-box-shadow: 0px 2px 0px 3px   #303f9f;
+}
+
+
+/*----------------------ROLES----------*/
+
+.TablaRegistros-roles{
+ width: 100%;
+ background-color: #f5f5f5;
+ margin-top: 52px;
+}
+
+.boton-formularioR{
+     width: 120px;
+    height: 27px;
+  color: white;
+    background: #007fff;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #003eff; 
+    cursor:pointer;
+    text-align: center;
+    margin:10px 780px;
+  position: absolute;
+  font-size: 11pt;
+  line-height: 25px;
+  box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808;
+}
+.boton-formularioR:hover{
+    color: #007fff;
+    font-weight: bold;
+    background: #fff;
+}
+.boton-formularioR:active{
+    color: #fff;
+    font-weight: bold;
+    background: #007fff;
+       box-shadow:  8px 10px 2px #080808;
+  -webkit-box-shadow: 8px 10px 2px #080808;
+  -moz-box-shadow:  8px 10px 2px #080808;
+}
+
+//Tabla Roles
+
+
+.cod-rolR
+{
+ width:10px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.nom-rolR
+{
+ width:230px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.descripcion-rolR
+{
+  width:490px;
+ height:17px;
+ padding-left: 3px;
+}
+
+/*-------------- Asignacion de  ROLES--------------*/
+
+.formulario-roles{
+    width: 800px;
+    height: 450px;
+    border: 6px #428bca double;
+    float: right;
+    margin: 99px 70px;
+     box-shadow: 2px 1px 4px 3px #080808;
+  -webkit-box-shadow: 2px 1px 4px 3px #080808;
+  -moz-box-shadow: 2px 1px 4px 3px #080808;
+    
+}
+
+.Iform-Crol{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 180px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+     box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff; 
+}
+
+.formRol-Nrol{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 450px;
+    height: 22px;
+    margin-top: -4px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 10pt;
+   box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.descripcion-Frol{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:black;
+    width: 500px;
+    height: 50px;
+    margin-top: -4px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 10pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+
+.div-DescripcionRol{
+    margin-top: 50px;
+    height: 80px;
+/*    background-color: #117a65;*/
+}
+
+.DB-formRoles{
+    width: 75%;
+    height: 60px;
+    margin: 30px 220px;
+/*    background: aqua;*/
+}
+
+.btn-buscarRol{
+  width: 80px;
+    height: 40px;
+    margin: 10px 5px;
+    background:#673ab7;
+    background-color: rgb(103, 58, 183);
+    border: #674ab8 solid 2px;
+      box-shadow: 0px 5px 0px 1px #4527a0;
+  -webkit-box-shadow: 0px 5px 0px 1px #4527a0;
+  -moz-box-shadow: 0px 5px 0px 1px #4527a0;
+  border-radius: 4px;
+  -wekit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-buscarRol:hover{
+   background: #512da8;
+    background-color: rgb(81, 45, 168);
+     box-shadow: 0px 7px 0px 2px #311b92;
+  -webkit-box-shadow: 0px 7px 0px 2px #311b92;
+  -moz-box-shadow: 0px 7px 0px 2px #311b92;
+}
+.btn-buscarRol:active{
+      background:#673ab7;
+    background-color: rgb(103, 58, 183);
+     box-shadow: 0px 2px 0px 3px #4527a0;
+  -webkit-box-shadow: 0px 2px 0px 3px #4527a0;
+  -moz-box-shadow: 0px 2px 0px 3px #4527a0;
+}
+
+.Iform-roleS{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 350px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 230px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+  box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+      border: solid 1px #007fff;  
+}
+.Iform-roleS:hover{
+    background: #000;
+    color: #ffffff;
+}
+
+/*---------------Buscar parametros---------*/
+.contenedor-parametros{
+    background: #e9e9e9;
+    width:  930px;
+    height: 400px;
+    float: right;
+    margin: 98px 11px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -wekit-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -mox-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+
+.TablaRegistros-parametros{
+ width: 100%;
+ background-color: #f5f5f5;
+ margin-top: 50px;
+}
+
+.modificarICO-para{
+    font-size: 16pt;
+    width: -100px;
+}
+.modificar-datosP{
+    width: 30px;
+    text-align: center;
+    background: #fff;
+    color: #007fff;
+    text-decoration: underline;
+    font-size: 12pt;
+    font-weight: bold;
+   
+}
+
+.modificar-datosP:hover{
+    width: 30px;
+    background: #007fff;
+    color: white;
+    font-weight: bold;
+}
+
+.modificar-datosP:active{
+    width: 30px;
+    color:  #007fff;
+    background: white;
+    font-weight: 100;
+}
+
+.modificar-datosAP:hover{
+       box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 3px 2px  #080808;
+  -moz-box-shadow: 2px 3px 2px #080808;  
+    color: white;
+}
+
+
+.modificar-datosAP:active{
+       box-shadow: 2px 3px 2px #080808;
+  -webkit-box-shadow: 2px 2px 30px #080808;
+  -moz-box-shadow: 2px 3px 2px #080808;  
+    color: #007fff;
+}
+/*Tabla*/
+.Des_parametro
+{
+ width:350px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.Val_parametro
+{
+ width:100px;
+ height:17px;
+ padding-left: 3px;
+}
+/*------------formulario Parametros-----*/
+
+.formulario-parametros{
+    width: 800px;
+    height: 350px;
+    border: 6px #428bca double;
+    float: right;
+    margin: 99px 70px;
+     box-shadow: 4px 3px 6px 5px #080808;
+  -webkit-box-shadow: 4px 3px 6px 5px #080808;
+  -moz-box-shadow: 4px 3px 6px 5px #080808;
+    
+}
+
+.DB-formParametros{
+     width: 40%;
+    height: 10%;
+    margin: -15px 240px;
+}
+
+/*------------- Modal Modulos-------*/
+
+.formulario-modulos{
+    width: 800px;
+    height: 260px;
+    border: 6px #428bca double;
+    float: right;
+    margin: -40px 70px;
+     box-shadow: 4px 3px 6px 5px #080808;
+  -webkit-box-shadow: 4px 3px 6px 5px #080808;
+  -moz-box-shadow: 4px 3px 6px 5px #080808;
+    
+}
+
+.Iform-moduloS{
+    font-family: 'Nunito Sans', sans-serif;
+    display:block;
+    background: #ffffff;
+    color:#000;
+    width: 450px;
+    height: 22px;
+    margin-top: -3px;  
+    margin-left: 140px;
+    position: absolute;
+    text-align:center;
+    font-weight: bold;
+    font-size: 11pt;
+   box-shadow: 3px 2px 4px 3px #080808;
+    -webkit-box-shadow: 3px 2px 4px 3px #080808;
+    -moz-box-shadow: 3px 2px 4px 3px #080808;
+      border: solid 1px #007fff;  
+}
+.Iform-moduloS:hover{
+    background: #000;
+    color: #ffffff;
+}
+
+.DB-formModulos{
+   width: 15%;
+    height: 60px;
+    margin: 60px 135px;
+/*    background: aqua;*/  
+}
+
+
+
+
+/*Modal cliente informe de citas*/
+
+.contenedor-clienteIC{
+    background: #e9e9e9;
+    width:  930px;
+    height: 400px;
+    float: right;
+    margin-top: -32px ;
+    margin-bottom: 15px;
+    margin-right: 25px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -wekit-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+    -mox-box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+.cod_Cliente{
+ width:200px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.Nom_ClienteIcitas{
+ width:360px;
+ height:17px;
+ padding-left: 3px;
+}
+
+.TablaRegistrosCitas-cliente{
+ width: 100%;
+ background-color: #f5f5f5;
+ margin-top: 45px;
+}
+
+.Lfiltro2IC{
+    float: left;
+    font-size: 10pt;
+    margin-top: 7px;
+    left: 70px;
+    position: absolute;
+    font-family: 'Nunito Sans', sans-serif;
+ 
+}
+
+.filtrar2IC{
+    width: 300px;
+    height: 18px;
+    display: block;
+    right: 49px;
+    margin-top: 7px;
+    margin-right: 474px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+
+
+/*modal Pais para cliente y usuarios*/
+
+.Lfiltro1-MPC{
+    float: left;
+    font-size: 10pt;
+    margin-left: 18px;
+    margin-top: 20px;
+    margin-right: 35px;
+    font-family: 'Nunito Sans', sans-serif;
+     
+}
+
+
+.filtrar1-MPC{
+    width: 100px;
+    height: 18px;
+    display: block;
+    right: 35px;
+    margin-top: 20px;
+    margin-right: 95px;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.Lfiltro2-MPC{
+    float: left;
+    font-size: 10pt;
+    margin-top: 7px;
+    left: 38px;
+    position: absolute;
+    font-family: 'Nunito Sans', sans-serif;
+ 
+}
+
+.filtrar2-MPC{
+    width: 200px;
+    height: 18px;
+    display: block;
+    right: 156px;
+    margin-top: 7px;
+    margin-right: 474px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}
+
+
+/*modal municipio para cliente y usuarios*/
+
+.Lfiltro1-MmC{
+    float: left;
+    font-size: 10pt;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 35px;
+    font-family: 'Nunito Sans', sans-serif;
+     
+}
+
+
+.filtrar1-MmC{
+    width: 100px;
+    height: 18px;
+    display: block;
+    right: 35px;
+    margin-top: 20px;
+    margin-right: 95px;
+    border:#2bbbd4 solid 0.5px;
+}
+
+.Lfiltro2-MmC{
+    float: left;
+    font-size: 10pt;
+    margin-top: 7px;
+    left: 40px;
+    position: absolute;
+    font-family: 'Nunito Sans', sans-serif;
+/*     border:#2bbbd4 solid 0.5px; */
+}
+
+.filtrar2-MmC{
+    width: 200px;
+    height: 18px;
+    display: block;
+    right: 120px;
+    margin-top: 7px;
+    margin-right: 474px;
+    position: absolute;
+    border:#2bbbd4 solid 0.5px;
+}   
+
+
+/* Estilo Jefferson Palacios */
+.listadoEmpleado:hover{
+	background: #4357ad;
+	color: white;
+	cursor: pointer;
+}
+
+ .horaFechas{
+	font-family: 'Nunito Sans', sans-serif;
+    display: table-cell;
+    background: #ffffff;
+    color: black;
+    width: 25px;
+    height: 22px;
+    margin-top: -4px;
+    margin-left: 430px;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+    border: solid 1px #007fff;
+}
+
+.minutosFechas{
+	font-family: 'Nunito Sans', sans-serif;
+    display: table-cell;
+    background: #ffffff;
+    color: black;
+    width: 25px;
+    height: 22px;
+    margin-top: -4px;
+    margin-left: 465px;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: 1px 0px 2px 1px #080808;
+    -webkit-box-shadow: 1px 0px 2px 1px #080808;
+    -moz-box-shadow: 1px 0px 2px 1px #080808;
+    border: solid 1px #007fff;
+}
+
